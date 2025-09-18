@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sports.css" />
+    <link rel="icon" type="image/svg+xml" href="/Cars/img/vimage.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>VAIBHAV HARIT CAR PROJECT||QUOTE</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 20px;
+        transform: translateY(-650%);
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+
+      .form-group {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 10px;
+        border: none;
+        background: #1c1c1c;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: 2px solid white;
+      }
+
+      label.required::after {
+        content: " *";
+        color: #ff4d4d;
+      }
+
+      .checkbox-group {
+        flex: 1 1 100%;
+        margin-top: 10px;
+      }
+
+      .checkbox-group input {
+        margin-right: 10px;
+      }
+
+      .form-group.full {
+        flex: 1 1 100%;
+      }
+
+      .qts {
+        padding: 15px;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border: 2px solid white;
+        color: white;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .qts:hover {
+        background-color: rgb(52, 51, 51);
+      }
+
+      .note {
+        font-size: 13px;
+        color: #ccc;
+      }
+      @media screen and (max-width: 724px) {
+        .menu-button-open {
+          display: block;
+          color: white;
+          font-size: 25px;
+        }
+
+        body.show-mobile-menu {
+          overflow: hidden;
+        }
+
+        body.show-mobile-menu header::before {
+          content: " ";
+          content: " ";
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-button-close {
+          position: absolute;
+          right: 30px;
+          top: 30px;
+          display: block;
+          color: #fff;
+        }
+        .contactcall {
+          display: none;
+        }
+        .contactcalll {
+          display: block;
+        }
+
+        header ul {
+          position: fixed;
+          top: 0px;
+          left: -300px;
+          gap: 50px;
+          flex-direction: column;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 300px;
+          height: 100vh;
+          z-index: 100;
+          background-color: black;
+
+          transition: all ease 0.5s;
+        }
+
+        body.show-mobile-menu ul {
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="http://127.0.0.1:5501/Cars/index.html" class="logo"
+        ><img src="./img/icon.png"
+      /></a>
+      <ul>
+        <li><a href="#">SHORT TERM RENTAL</a></li>
+        <li><a href="#">MEDIUM TERM RENTAL</a></li>
+        <li>
+          <a href="http://127.0.0.1:5501/Cars/Quote.html">REQUEST QUOTE</a>
+        </li>
+        <div class="menu-button-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </ul>
+      <div class="menu-button-open">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <section class="banner"><img src="./img/qts.webp" alt="" /></section>
+    <div class="container">
+      <h2>Request a Quote</h2>
+      <form id="quoteForm">
+        <div class="form-group">
+          <label class="required">First Name</label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label class="required">Last Name</label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label class="required">Email</label>
+          <input type="email" required />
+        </div>
+        <div class="form-group">
+          <label class="required">Phone Prefix</label>
+          <input type="text" placeholder="+91" required />
+        </div>
+        <div class="form-group">
+          <label class="required">Phone</label>
+          <input type="tel" required />
+        </div>
+        <div class="form-group">
+          <label>City of Residence</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label class="required">Pickup Location</label>
+          <input type="text" required />
+        </div>
+        <div class="form-group">
+          <label>Return Location</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label>Vehicle Type</label>
+          <select>
+            <option>Luxury</option>
+            <option>SUV</option>
+            <option>Convertible</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Brand</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label>Car Model</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label class="required">Rental Dates</label>
+          <input type="text" placeholder="From - To" required />
+        </div>
+        <div class="form-group full">
+          <label>Additional notes for quote request</label>
+          <textarea rows="3" placeholder="Your message..."></textarea>
+        </div>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" required />
+            I have read the
+            <a href="#" style="color: #ff6600">privacy policy</a> and consent to
+            the processing of my personal data.
+          </label>
+        </div>
+        <a href="#"
+          ><button type="submit" class="qts">REQUEST A QUOTE</button></a
+        >
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="foot-one">
+        <a href="http://127.0.0.1:5501/Cars/index.html"
+          ><img src="./img/icon.png" alt=""
+        /></a>
+        <div class="social">
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="foot-two">
+        <button style="background: transparent; color: gray; padding: 2px">
+          PRIVACY POLICY
+        </button>
+        <a href="#">COOKING MANAGEMENT</a>
+        <a href="#">COPYRIGHT 2025</a>
+        <a href="#">PRIME S.R.L VAT</a>
+      </div>
+      <div class="foot-three">
+        <a href="#">xyz@gmail.com</a>
+        <a href="#">+91 9874563210</a>
+      </div>
+    </footer>
+
+    <script>
+      const menuOpenButton = document.querySelector(".menu-button-open");
+      const menuCloseButton = document.querySelector(".menu-button-close");
+
+      menuOpenButton.addEventListener("click", () => {
+        document.body.classList.add("show-mobile-menu");
+      });
+
+      menuCloseButton.addEventListener("click", () => {
+        document.body.classList.remove("show-mobile-menu");
+      });
+
+      document
+        .getElementById("quoteForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Quote request submitted!");
+        });
+    </script>
+  </body>
+</html>
